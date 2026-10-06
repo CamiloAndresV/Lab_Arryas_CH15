@@ -20,7 +20,13 @@
 // ============================================================
 
 function soloDisponibles(menu) {
-  // Tu código aquí
+  let dispo = []
+  for (let i = 0; i < menu.length; i++) {
+    if (menu[i].disponible == true) {
+      dispo.push(menu[i])
+    }
+  }
+  return dispo
 }
 
 // No borres esta línea: es la puerta por donde el test usa tu función

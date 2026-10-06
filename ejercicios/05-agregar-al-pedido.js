@@ -20,8 +20,15 @@
 // ============================================================
 
 function agregarAlPedido(pedido, carta, numero) {
-  // Tu código aquí
+  const vari = carta[numero]
+  if (vari === undefined) {
+    return `Ese número no está en la carta`
+  }
+  pedido.push(vari)
+  return `Agregado: ${vari.nombre}`
 }
+
+
 
 // No borres esta línea: es la puerta por donde el test usa tu función
 module.exports = { agregarAlPedido };

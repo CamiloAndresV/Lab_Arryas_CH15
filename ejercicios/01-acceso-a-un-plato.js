@@ -21,7 +21,11 @@
 // ============================================================
 
 function describirPlato(menu, posicion) {
-  // Tu código aquí
+  const variable = menu[posicion]
+  if (variable === undefined ) {
+    return "Ese plato no existe"
+  }
+  return `${variable.nombre} · $${variable.precio}`
 }
 
 // No borres esta línea: es la puerta por donde el test usa tu función
